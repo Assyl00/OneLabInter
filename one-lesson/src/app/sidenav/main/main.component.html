@@ -1,0 +1,45 @@
+<h1>Wake Up Studio</h1>
+<div [class]="styleCheckbox">
+    <h4>Choose style:</h4>
+    <input type="checkbox" [(ngModel)] = "isKpop">Kpop
+    <input type="checkbox" [(ngModel)] = "isHiphop">Hiphop
+    <input type="checkbox" [(ngModel)] = "isLatino">Latino
+</div>
+
+
+<div class="row" *ngIf="isKpop">
+    <div class="column">
+        <img src="https://newsroom.korea.net/upload/content/editImage/20210107182937527_BSV1GHU4.jpg" alt="kpop dance" >
+    </div>
+    
+    <div class="column">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nulla laboriosam magnam libero quia asperiores 
+            vitae facere dolorum molestias quis, ex beatae odit cumque alias accusamus reprehenderit voluptatibus nesciunt nisi.</p>
+    </div>
+    <hr>
+</div>
+
+<div class="row" *ngIf="isHiphop">
+    <div class="column">
+        <img src="https://media.istockphoto.com/photos/two-young-people-guy-and-girl-in-casual-clothes-dancing-contemp
+orary-picture-id1334841020?k=20&m=1334841020&s=612x612&w=0&h=LsTymAEfSU6aBES-7IqaeXMnvmOqkcu7bcIggPCJBYM=" alt="hiphop dance" >
+    </div>
+    
+
+    <div class="column"> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nulla laboriosam magnam libero quia asperiores 
+            vitae facere dolorum molestias quis, ex beatae odit cumque alias accusamus reprehenderit voluptatibus nesciunt nisi.</p>
+    </div>
+    <hr>
+</div>
+
+<div class="row" *ngIf="isLatino">
+    <div class="column">
+        <img src="https://www.myplacebar.com.au/uploads/b/35c96970-33c7-11eb-a8e3-a1b706cd923b/Salsa-Dance-In-Perth.jpeg" alt="latino dance">
+    </div>
+    
+    <div class="column">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nulla laboriosam magnam libero quia asperiores 
+            vitae facere dolorum molestias quis, ex beatae odit cumque alias accusamus reprehenderit voluptatibus nesciunt nisi.</p>
+    </div>
+</div>

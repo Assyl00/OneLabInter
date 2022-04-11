@@ -9,6 +9,9 @@ export class SidenavComponent implements OnInit {
 
   constructor() { }
 
+  page = "main";
+  isPage = true;
+
   ngOnInit(): void {
   }
 
