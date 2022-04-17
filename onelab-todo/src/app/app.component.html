@@ -1,0 +1,10 @@
+<app-todo></app-todo>
+
+<button (click)="toggleChildComp = !toggleChildComp">Toggle child</button>
+<div *ngIf="toggleChildComp">
+
+  <child-comp [name]="fullName" [age]="age" (changeDataHandle)="dataHandleChild($event)"></child-comp>
+
+  <input type="text" [(ngModel)]="fullName">
+  <input type="number" [(ngModel)]="age">
+</div>
