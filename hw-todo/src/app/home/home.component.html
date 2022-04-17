@@ -1,0 +1,82 @@
+<!--<h1>{{title}}</h1>
+<p>FullName: {{fullName}}</p>
+
+<h4>{{1 + 2}}</h4>
+<h4>{{isThree ? 'true' : 'false'}}</h4>
+
+<div>
+  <label>Full name</label>
+  <input type="text" [value]="fullName" [placeholder]="placeholder">
+</div>
+
+<div>
+  <label>First name</label>
+  <input type="text" [attr.value]="fullName">
+</div>
+
+&lt;!&ndash;<img [src]="imageUrl" alt="">&ndash;&gt;
+
+<hr>
+
+<div>
+  <p>Counter: {{counter}}</p>
+  <button (click)="increase($event)">button</button>
+</div>
+
+<hr>
+
+<div>
+  <label>Username: </label>
+  <input type="text" [(ngModel)]="username">
+  <p>USERNAME: {{username}}</p>
+</div>-->
+
+<!--<div class="box" [class.redBox]="isRedBox"></div>
+<div class="box" [class.redBox]="!isRedBox"></div>
+<input type="checkbox" [(ngModel)]="isRedBox">-->
+
+<div [ngClass]="ourClasses"></div>
+
+<div>
+  <input type="checkbox" [(ngModel)]="isBox"> toggle box
+</div>
+<div>
+  <input type="checkbox" [(ngModel)]="isRedBox"> toggle red box
+</div>
+
+
+<h1>ngIf</h1>
+<div class="box" *ngIf="isBox"></div>
+<button (click)="isBox = !isBox">button</button>
+
+<hr>
+
+<h1>ngFor</h1>
+<div *ngFor="let post of posts">
+  <h4>{{post.name}}</h4>
+  <p>{{post.text}}</p>
+</div>
+
+<hr>
+
+<h1>ngSwitch</h1>
+
+<button (click)="browser = 'opera'">Opera</button>
+<button (click)="browser = 'chrome'">Chrome</button>
+<button (click)="browser = 'firefox'">Firefox</button>
+<button (click)="browser = 'safari'">Safari</button>
+
+<div [ngSwitch]="browser">
+  <div *ngSwitchCase="'opera'">
+    Hello Opera!
+  </div>
+  <div *ngSwitchCase="'chrome'">
+    Hello Chrome!
+  </div>
+  <div *ngSwitchCase="'firefox'">
+    Hello Firefox!
+  </div>
+  <div *ngSwitchDefault>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam enim, eum facere, id illo impedit, maiores minima nam nemo nesciunt optio perferendis possimus praesentium quibusdam quod repellat sed tenetur voluptas.
+  </div>
+</div>

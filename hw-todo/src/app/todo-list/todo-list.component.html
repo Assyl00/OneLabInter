@@ -1,0 +1,6 @@
+<div class="todo-list">
+    <app-todo-item *ngFor="let item of list; let idx = index" 
+    [item] = "item" 
+    [itemIndex] = "idx"
+    (deleteHandle)="deleteTodo(idx)"></app-todo-item>
+</div>

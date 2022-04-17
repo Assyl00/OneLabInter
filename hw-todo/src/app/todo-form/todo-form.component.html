@@ -1,0 +1,4 @@
+<div class="form">
+    <input type="text" [(ngModel)]="value" placeholder="Введите задачу">
+    <button (click)="addDataHandle.emit(value); value = ''">Добавить</button>
+</div>

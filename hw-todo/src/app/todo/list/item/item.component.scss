@@ -1,0 +1,14 @@
+button {
+  color: white;
+  background-color: rgb(241, 76, 76);
+  border: 1px solid rgb(217, 39, 39);
+}
+
+button:hover {
+  background-color: rgb(227, 27, 27);
+}
+
+button:active {
+  background-color: rgb(136, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+}

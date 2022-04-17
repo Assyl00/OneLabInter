@@ -1,0 +1,29 @@
+.delete-btn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(202, 79, 79);
+    color: white;
+    width: 80px;
+    height: 30px;
+}
+
+.delete-btn:hover {
+    background-color: rgb(141, 13, 13);
+}
+
+.todo-item {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+  
+      span {
+        margin-left: 10px;
+        margin-right: 20px;
+      }
+}
+
+.todo-complete {
+    text-decoration: line-through;
+  }
