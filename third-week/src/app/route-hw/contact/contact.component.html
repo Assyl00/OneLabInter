@@ -1,0 +1,20 @@
+<form class="my-form" [formGroup]="userForm">
+    <div>
+      <label>Username:</label>
+      <input type="text" formControlName="username">
+      <div *ngIf="userForm.touched">
+        <div class="red-text" *ngIf="usernameCtrl(userForm, 'username')?.required">Обязательное поле</div>
+      </div>
+    </div>
+    <div>
+        <label>Comment:</label>
+        <input type="text" formControlName="comment">
+        <div *ngIf="userForm.touched">
+            <div class="red-text" *ngIf="usernameCtrl(userForm, 'comment')?.required">Обязательное поле</div>
+          </div>
+    </div>
+</form>
+
+<div>
+    <button type="submit" (click)="submit(userForm)">Submit</button>
+</div>
