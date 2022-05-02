@@ -3,20 +3,12 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<< HEAD
     "second-week": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "sass"
-=======
-    "one-lesson": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
->>>>>>> ff315c2348fb006f10344bc199948fddf6a0af29
-        },
+    "projectType": "application",
+    "schematics": {
+      "@schematics/angular:component": {
+        "style": "sass"
+      },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -28,30 +20,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
             "outputPath": "dist/second-week",
-=======
-            "outputPath": "dist/one-lesson",
->>>>>>> ff315c2348fb006f10344bc199948fddf6a0af29
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-<<<<<<< HEAD
             "inlineStyleLanguage": "sass",
-=======
-            "inlineStyleLanguage": "scss",
->>>>>>> ff315c2348fb006f10344bc199948fddf6a0af29
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
               "src/styles.sass"
-=======
-              "src/styles.scss"
->>>>>>> ff315c2348fb006f10344bc199948fddf6a0af29
             ],
             "scripts": []
           },
@@ -92,17 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-<<<<<<< HEAD
               "browserTarget": "second-week:build:production"
             },
             "development": {
               "browserTarget": "second-week:build:development"
-=======
-              "browserTarget": "one-lesson:build:production"
-            },
-            "development": {
-              "browserTarget": "one-lesson:build:development"
->>>>>>> ff315c2348fb006f10344bc199948fddf6a0af29
             }
           },
           "defaultConfiguration": "development"
@@ -110,11 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
             "browserTarget": "second-week:build"
-=======
-            "browserTarget": "one-lesson:build"
->>>>>>> ff315c2348fb006f10344bc199948fddf6a0af29
           }
         },
         "test": {
@@ -124,21 +93,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-<<<<<<< HEAD
             "inlineStyleLanguage": "sass",
-=======
-            "inlineStyleLanguage": "scss",
->>>>>>> ff315c2348fb006f10344bc199948fddf6a0af29
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
               "src/styles.sass"
-=======
-              "src/styles.scss"
->>>>>>> ff315c2348fb006f10344bc199948fddf6a0af29
             ],
             "scripts": []
           }
@@ -146,9 +107,6 @@
       }
     }
   },
-<<<<<<< HEAD
+
   "defaultProject": "second-week"
-=======
-  "defaultProject": "one-lesson"
->>>>>>> ff315c2348fb006f10344bc199948fddf6a0af29
 }

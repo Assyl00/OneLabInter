@@ -1,0 +1,15 @@
+
+<div class="menu">
+    <button (click)="back()">Back</button>
+    <nav>
+        <ul>
+            <li><a [routerLink]="['/main']" routerLinkActive="active">Main</a></li>
+            <li><a [routerLink]="['/aboutus']" routerLinkActive="active">About Us</a></li>
+            <li><a [routerLink]="['/products']" routerLinkActive="active">Products</a> </li>
+            <li><a [routerLink]="['/cart']" routerLinkActive="active">Cart</a></li>
+            <button class="login" [routerLink]="['/login']" routerLinkActive="active">Login</button>
+            <button class="logout" (click)="logout()">Logout</button>
+        </ul>
+    </nav>
+</div>
+<router-outlet></router-outlet>

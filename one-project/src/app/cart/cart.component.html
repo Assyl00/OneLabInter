@@ -1,0 +1,14 @@
+<div class="container" >
+    <div *ngIf="!isEmpty()" class="list">
+        <h4>Cart:</h4>
+        <ol *ngFor="let cart of carts">
+            <li>{{cart.title}}
+                <br>
+                {{cart.price | currency}}
+            </li>
+        </ol>
+    </div>
+    <div *ngIf="isEmpty()" class="list">
+        <h4>Your cart is empty</h4>
+    </div>
+</div>

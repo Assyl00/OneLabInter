@@ -1,0 +1,38 @@
+<div class="container">
+
+<h3>Feedback</h3>
+<div class="feedback" *ngIf="writefb">
+  <form class="my-form" [formGroup]="feedbackForm">
+    <div>
+      <label>Name:</label>
+      <input type="text" formControlName="name">
+      <div *ngIf="feedbackForm.get('name')?.touched">
+        <div class="red-text" *ngIf="controlErrors(feedbackForm, 'name')?.required">Fill the blank</div>
+        <!-- {{getErrorMessage(formControl.name)}} -->
+      </div>
+    </div>
+    
+
+    <div class="text">
+      <label>Feedback:</label>
+      <input type="text" formControlName="feedback">
+      <div *ngIf="feedbackForm.get('feedback')?.touched">
+        <div class="red-text" *ngIf="controlErrors(feedbackForm, 'feedback')?.required">Fill the blank</div>
+        <div class="red-text" *ngIf="controlErrors(feedbackForm, 'feedback')?.minlength">Minimum required 3 symbols</div>
+      </div>
+    </div>
+  </form>
+  <!-- <button type="button" (click)="deleteFormGroup(idx)">удалить</button> -->
+  <div>
+    <button type="submit" (click)="submit()" [disabled]="feedbackForm.invalid">Submit</button>
+    <!-- <button type="submit" (click)="createNewFormGroup()">Add user form group</button> -->
+  </div>
+</div>
+
+
+<div *ngIf="showfb">
+  <p>Name: {{name}}</p>
+  <p>Feedback: {{text}}</p>
+</div>
+
+</div>

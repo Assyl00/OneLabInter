@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="search">
+      <input type="text" [(ngModel)]="searchName" placeholder="Search for...">
+      <button (click)="search()">Search</button>
+    </div>
+    <!-- <app-search (data)="eventHandle($event)"></app-search> -->
+    <div class="product" *ngFor="let product of searchRes">
+      <img height="200px" [src]="product.images[0]" alt="">
+      <div class="info">
+        <a [title]="product.brand" [routerLink]="['/products', product.id]">
+          {{product.title}}
+        </a>
+        <p>{{product.description}}</p>
+        <p><strong>Цена:</strong> {{product.price | currency}}</p>
+      </div>
+    </div>
+</div>
