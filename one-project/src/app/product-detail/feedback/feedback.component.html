@@ -8,7 +8,6 @@
       <input type="text" formControlName="name">
       <div *ngIf="feedbackForm.get('name')?.touched">
         <div class="red-text" *ngIf="controlErrors(feedbackForm, 'name')?.required">Fill the blank</div>
-        <!-- {{getErrorMessage(formControl.name)}} -->
       </div>
     </div>
     
@@ -22,15 +21,13 @@
       </div>
     </div>
   </form>
-  <!-- <button type="button" (click)="deleteFormGroup(idx)">удалить</button> -->
   <div>
     <button type="submit" (click)="submit()" [disabled]="feedbackForm.invalid">Submit</button>
-    <!-- <button type="submit" (click)="createNewFormGroup()">Add user form group</button> -->
   </div>
 </div>
 
 
-<div *ngIf="showfb">
+<div class="showed" *ngIf="showfb">
   <p>Name: {{name}}</p>
   <p>Feedback: {{text}}</p>
 </div>

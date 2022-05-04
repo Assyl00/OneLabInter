@@ -28,11 +28,11 @@ export class LoginComponent implements OnInit {
     const { login, password } = this.loginForm.value;
     if (login === 'assyl' && password === '123') {
       localStorage.setItem('login', login);
-      alert('Успешная авторизация!');
+      // alert('Успешная авторизация!');
       this.location.back();
       // this.router.navigateByUrl('/home');
     } else {
-      alert('Неправильный логин и/или пароль!');
+      alert('Incorrect login/password');
     }
   }
 

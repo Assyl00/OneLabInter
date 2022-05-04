@@ -2,11 +2,18 @@
     <div *ngIf="!isEmpty()" class="list">
         <h4>Cart:</h4>
         <ol *ngFor="let cart of carts">
-            <li>{{cart.title}}
+            <li appHighlight class="product">
+                <img src="{{cart.images[0]}}" alt="omage of product" width="200px">
+                <div class="info">
+                    {{cart.title}}
                 <br>
                 {{cart.price | currency}}
+                </div> 
+                
             </li>
+            <button (click)="deleteProduct(cart.id)">Delete</button>
         </ol>
+        
     </div>
     <div *ngIf="isEmpty()" class="list">
         <h4>Your cart is empty</h4>

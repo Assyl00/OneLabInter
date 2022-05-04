@@ -28,11 +28,11 @@ export class LoginGuard implements CanActivate {
 
   private checkLogin(): boolean {
     const login = localStorage.getItem('login');
-    if (login === 'admin') {
+    if (login === 'assyl') {
       return true;
     }
     alert("Authorize first!");
-    // this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('/header/login');
     // console.log(login);
     // this.location.back();
     return false;

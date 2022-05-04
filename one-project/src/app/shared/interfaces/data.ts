@@ -21,9 +21,3 @@ export interface ResponseProduct {
     total: number;
   }
 
-export interface Feedback{
-    name: string;
-    text: string;
-}
-
-// "src/styles.sass",

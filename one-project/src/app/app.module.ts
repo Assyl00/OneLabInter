@@ -19,6 +19,7 @@ import { CustomPipe } from './shared/pipes/custom.pipe';
 import { SearchComponent } from './products/search/search.component';
 import { LoginGuard } from './shared/guards/login.guard';
 import { FeedbackComponent } from './product-detail/feedback/feedback.component';
+import { HighlightDirective } from './shared/directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,11 @@ import { FeedbackComponent } from './product-detail/feedback/feedback.component'
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
-    ProductDetailComponent,
     CustomPipe,
     SearchComponent,
     CartComponent,
     LoginComponent,
-    FeedbackComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
@@ -44,38 +44,43 @@ import { FeedbackComponent } from './product-detail/feedback/feedback.component'
         redirectTo: '/main',
         pathMatch: 'full',
       },
-      {
-        path: 'main',
-        component: MainPageComponent,
-      },
-      {
-        path: 'aboutus',
-        component: AboutusComponent,
-      },
-      {
-        path: 'products',
-        component: ProductsComponent,
-        // loadChildren: () => import('./products/products.module'),
-        // children: [
-        //   {
-        //     path: ':id',
-        //     component: ProductDetailComponent,
-        //   },
-        // ],
-      },
-      {
-        path: 'products/:id',
-        component: ProductDetailComponent,
+      // {
+      //   path: 'products',
+      //   // component: ProductsComponent,
+      //   loadChildren: () => import('./products/products.module').then(m => m.ProductsModule),
+      //   // children: [
+      //   //   {
+      //   //     path: ':id',
+      //   //     component: ProductDetailComponent,
+      //   //   },
+      //   // ],
+      // },  
+      // {
+      //   path: 'main',
+      //   component: MainPageComponent,
+      // },
+      // {
+      //   path: 'aboutus',
+      //   component: AboutusComponent,
+      // },
+      
+      // // {
+      // //   path: 'products/:id',
+      // //   component: ProductDetailComponent,
         
-      },
+      // // },
+      // {
+      //   path: 'login',
+      //   component: LoginComponent,
+      // },
+      // {
+      //   path: 'cart',
+      //   component: CartComponent,
+      //   canActivate: [LoginGuard],
+      // },
       {
-        path: 'login',
-        component: LoginComponent,
-      },
-      {
-        path: 'cart',
-        component: CartComponent,
-        canActivate: [LoginGuard],
+        path: 'header',
+        loadChildren: () => import('./header/header.module').then(m => m.HeaderModule),
       },
       {
         path: '**',

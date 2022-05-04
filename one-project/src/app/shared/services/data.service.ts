@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Feedback, Product, ResponseProduct } from '../interfaces/data';
+import { Product, ResponseProduct } from '../interfaces/data';
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +31,7 @@ export class DataService {
 
   deleteProduct(id: number){
     this.cart = this.cart.filter((x) => x.id !== id);
+    // this.cart = this.cart.splice(id, 1);
     console.log(this.cart);
   }
 

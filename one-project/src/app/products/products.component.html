@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <div class="container">
     <div class="search">
       <input type="text" [(ngModel)]="searchName" placeholder="Search for...">
@@ -7,7 +8,7 @@
     <div class="product" *ngFor="let product of searchRes">
       <img height="200px" [src]="product.images[0]" alt="">
       <div class="info">
-        <a [title]="product.brand" [routerLink]="['/products', product.id]">
+        <a [title]="product.brand" [routerLink]="['/header/products', product.id]">
           {{product.title}}
         </a>
         <p>{{product.description}}</p>

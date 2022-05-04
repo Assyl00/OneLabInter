@@ -59,7 +59,7 @@ export class ProductDetailComponent extends DestroyComponent implements OnInit {
     }
     else{
       alert("Please authorize first!");
-      this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/header/login');
     }
     // console.log(login);
     // console.log(this.dataService.cart)

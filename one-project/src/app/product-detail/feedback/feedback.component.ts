@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormArray, FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Feedback } from 'src/app/shared/interfaces/data';
-import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-feedback',
@@ -48,12 +46,8 @@ export class FeedbackComponent implements OnInit {
     }
     else{
       alert("Please authorize first!");
-      this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/header/login');
     }
-  }
-
-  getFeedback(){
-    return localStorage.getItem('name'), localStorage.getItem('feedback');
   }
 
   controlErrors(formGroup: FormGroup, ctrlName: string): any {
